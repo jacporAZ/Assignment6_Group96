@@ -7,19 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace eventWeb
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class WebForm2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
