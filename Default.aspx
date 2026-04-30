@@ -252,8 +252,8 @@
         </p>
 
         <p>
-            <asp:HyperLink ID="lnkMemberPage" runat="server" NavigateUrl="javascript:void(0);">
-                Go to Member Page (Assignment 6 placeholder)
+            <asp:HyperLink ID="lnkMemberPage" runat="server" NavigateUrl="~/MemberPage.aspx">
+                Go to Member Page
             </asp:HyperLink>
             <br /><br />
             <asp:HyperLink ID="lnkStaffPage" runat="server" NavigateUrl="javascript:void(0);">
