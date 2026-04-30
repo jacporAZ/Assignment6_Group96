@@ -120,6 +120,28 @@
                 <td>Protected member page functionality for Assignment 6.</td>
                 <td><code>MemberPage.aspx</code>.</td>
             </tr>
+            <tr>
+                <td>Jacob Porter</td>
+                <td>Hashing Functions DLL Class Library</td>
+                <td>
+                    Hashing Function 
+                    <br />DLL library that provides a hashing function for secure password storage.
+                </td>
+                <td>
+                    using SHA-256 encryption and decryption to store passwords
+                </td>
+            </tr>
+                        <tr>
+                <td>Jacob Porter</td>
+                <td>Get Club Services</td>
+                <td>
+                    get info on clubs, such as members and meeting times
+                </td>
+                <td>
+                    using algorithmic sorting and methods
+                </td>
+            </tr>
+                
         </table>
     </div>
 
@@ -155,6 +177,14 @@
                 Expected output: <code>A</code>.
             </p>
         </div>
+         <div class="service-box">
+     <h4>Try it page for Club Services</h4>
+       <a href="Try-it-WebService.aspx"> Try it Page for Club Services </a>
+          </div>
+                 <div class="service-box">
+     <h4>Try it page for Hashing</h4>
+       <a href="Try-itHash.aspx"> Try it Page for Hashing Features </a>
+          </div>
     </div>
 
     <div class="section-box">

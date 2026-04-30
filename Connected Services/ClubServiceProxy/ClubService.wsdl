@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="tmpUri" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="tmpUri" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="tmpUri">
+      <s:element name="GetClubs">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetClubsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClubsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getClubInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClubName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getClubInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getClubInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getClubMembers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClubName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getClubMembersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getClubMembersResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetClubsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClubs" />
+  </wsdl:message>
+  <wsdl:message name="GetClubsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClubsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getClubInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getClubInfo" />
+  </wsdl:message>
+  <wsdl:message name="getClubInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getClubInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getClubMembersSoapIn">
+    <wsdl:part name="parameters" element="tns:getClubMembers" />
+  </wsdl:message>
+  <wsdl:message name="getClubMembersSoapOut">
+    <wsdl:part name="parameters" element="tns:getClubMembersResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ClubServiceSoap">
+    <wsdl:operation name="GetClubs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns clubs as list</wsdl:documentation>
+      <wsdl:input message="tns:GetClubsSoapIn" />
+      <wsdl:output message="tns:GetClubsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getClubInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the details of the clubs</wsdl:documentation>
+      <wsdl:input message="tns:getClubInfoSoapIn" />
+      <wsdl:output message="tns:getClubInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getClubMembers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the number of members in a club</wsdl:documentation>
+      <wsdl:input message="tns:getClubMembersSoapIn" />
+      <wsdl:output message="tns:getClubMembersSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ClubServiceSoap" type="tns:ClubServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetClubs">
+      <soap:operation soapAction="tmpUri/GetClubs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClubInfo">
+      <soap:operation soapAction="tmpUri/getClubInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClubMembers">
+      <soap:operation soapAction="tmpUri/getClubMembers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ClubServiceSoap12" type="tns:ClubServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetClubs">
+      <soap12:operation soapAction="tmpUri/GetClubs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClubInfo">
+      <soap12:operation soapAction="tmpUri/getClubInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClubMembers">
+      <soap12:operation soapAction="tmpUri/getClubMembers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClubService">
+    <wsdl:port name="ClubServiceSoap" binding="tns:ClubServiceSoap">
+      <soap:address location="https://localhost:44399/ClubService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ClubServiceSoap12" binding="tns:ClubServiceSoap12">
+      <soap12:address location="https://localhost:44399/ClubService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
