@@ -194,6 +194,18 @@
             </tr>
 
             <tr>
+            <td>Jaden Prather</td>
+               <td>Staff Page (Access Control)</td>
+      <td>
+                    Implements staff authentication using credentials stored in Staff.xml.
+                    Includes login page, protected page, and logout functionality.
+          </td>
+      <td>
+        StaffLogin.aspx, Staff.aspx, Staff.xml, session authentication logic.
+    </td>
+            </tr>
+
+            <tr>
                 <td>Team Integration</td>
                 <td>Future Member Page</td>
                 <td>
@@ -253,11 +265,11 @@
 
         <p>
             <asp:HyperLink ID="lnkMemberPage" runat="server" NavigateUrl="javascript:void(0);">
-                Go to Member Page (Assignment 6 placeholder)
+                Go to Member Page 
             </asp:HyperLink>
             <br /><br />
-            <asp:HyperLink ID="lnkStaffPage" runat="server" NavigateUrl="javascript:void(0);">
-                Go to Staff Page (Assignment 6 placeholder)
+            <asp:HyperLink ID="lnkStaffPage" runat="server" NavigateUrl="~/Staff.aspx">
+                Go to Staff Page
             </asp:HyperLink>
         </p>
     </div>
