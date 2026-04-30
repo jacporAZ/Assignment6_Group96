@@ -256,9 +256,9 @@
                 Go to Member Page
             </asp:HyperLink>
             <br /><br />
-            <asp:HyperLink ID="lnkStaffPage" runat="server" NavigateUrl="javascript:void(0);">
-                Go to Staff Page (Assignment 6 placeholder)
-            </asp:HyperLink>
+           <asp:HyperLink ID="lnkStaffPage" runat="server" NavigateUrl="~/Staff.aspx">
+                Go to Staff Page
+</asp:HyperLink>
         </p>
     </div>
 
